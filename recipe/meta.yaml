@@ -1,13 +1,13 @@
 {% set name = "tea-tasting" %}
-{% set version = "0.1.0" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/tea_tasting-{{ version }}.tar.gz
-  sha256: db047764ddc7769491816786eb67f201d71b8ba6c5b50c068b056b28bc495339
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/tea_tasting-{{ version }}.tar.gz
+  sha256: 39337c33201eb46c950672fb93fffb3532e8ef77d54bfb10219dc13cf8abaac8
 
 build:
   noarch: python
