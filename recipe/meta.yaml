@@ -1,13 +1,14 @@
 {% set name = "tea-tasting" %}
-{% set version = "0.1.0" %}
+{% set version = "0.2.0" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/tea_tasting-{{ version }}.tar.gz
-  sha256: db047764ddc7769491816786eb67f201d71b8ba6c5b50c068b056b28bc495339
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/tea_tasting-{{ version }}.tar.gz
+  sha256: 39337c33201eb46c950672fb93fffb3532e8ef77d54bfb10219dc13cf8abaac8
 
 build:
   noarch: python
@@ -16,11 +17,11 @@ build:
 
 requirements:
   host:
-    - python >=3.10
+    - python {{ python_min }}
     - pdm-backend
     - pip
   run:
-    - python >=3.10
+    - python >={{ python_min }}
     - ibis-framework >=7,<10
     - numpy >=1.25,<3
     - pandas >=2,<3
@@ -33,6 +34,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/e10v/tea-tasting
