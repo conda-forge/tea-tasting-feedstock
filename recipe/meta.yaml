@@ -23,6 +23,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - ibis-framework >=7,<10
+    - narwhals >=1,<2
     - numpy >=1.25,<3
     - pandas >=2,<3
     - scipy >=1.10,<2
