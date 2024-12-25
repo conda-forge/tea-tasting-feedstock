@@ -22,10 +22,10 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - ibis-framework >=7,<10
-    - narwhals >=1,<2
-    - numpy >=1.25,<3
-    - pandas >=2,<3
+    - ibis-framework >=7
+    - narwhals >=1
+    - numpy >=1.25
+    - pandas >=2
     - scipy >=1.10,<2
 
 test:
