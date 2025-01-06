@@ -1,5 +1,5 @@
 {% set name = "tea-tasting" %}
-{% set version = "0.3.1" %}
+{% set version = "0.4.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/tea_tasting-{{ version }}.tar.gz
-  sha256: e7abb9b370098b010dc1987d6d9070c7e89fa303c5e938f1a087db3bd685905f
+  sha256: 17032a1b153d4250c0bcb6aec04db78f2e165431acbf66a685e121b9a64afb3a
 
 build:
   noarch: python
@@ -25,8 +25,8 @@ requirements:
     - ibis-framework >=7
     - narwhals >=1
     - numpy >=1.25
-    - pandas >=2
-    - scipy >=1.10,<2
+    - pyarrow >=15
+    - scipy >=1.10
 
 test:
   imports:
