@@ -1,5 +1,5 @@
 {% set name = "tea-tasting" %}
-{% set version = "0.4.3" %}
+{% set version = "0.5.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/tea_tasting-{{ version }}.tar.gz
-  sha256: daaeafa089094df80f4d7d1963479ea18433026382734e9c6d102ef72755d4c8
+  sha256: 4892b3fee2667fa4c6e0dff84ce6c72f4fffddad88c65a14499de3e73e36bd81
 
 build:
   noarch: python
