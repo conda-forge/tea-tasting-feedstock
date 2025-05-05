@@ -22,11 +22,11 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - ibis-framework >=7
-    - narwhals >=1
+    - ibis-framework >=9
+    - narwhals >=1.4
     - numpy >=1.25
-    - pyarrow >=15
-    - scipy >=1.10
+    - pyarrow >=16
+    - scipy >=1.11
 
 test:
   imports:
