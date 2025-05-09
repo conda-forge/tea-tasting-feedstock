@@ -1,0 +1,50 @@
+schema_version: 1
+
+context:
+  name: tea-tasting
+  version: 1.3.0
+  python_min: 3.10
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/tea_tasting-${{ version }}.tar.gz
+  sha256: 8eb618aed22a6ee8a57895e110c1d9a649dd68e2534410684279763cbb5d672e
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - pdm-backend
+    - pip
+  run:
+    - python >=${{ python_min }}
+    - ibis-framework >=9
+    - narwhals >=1.4
+    - numpy >=1.25
+    - pyarrow >=16
+    - scipy >=1.11
+
+tests:
+  - python:
+      imports:
+        - tea_tasting
+      pip_check: true
+      python_version: ${{ python_min }}.*
+
+about:
+  summary: A Python package for statistical analysis of A/B tests.
+  license: MIT
+  license_file: LICENSE
+  homepage: https://github.com/e10v/tea-tasting
+  documentation: https://tea-tasting.e10v.me
+
+extra:
+  recipe-maintainers:
+    - thewchan
