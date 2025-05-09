@@ -9,7 +9,7 @@ Package license: MIT
 
 Summary: A Python package for statistical analysis of A/B tests.
 
-Documentation: https://tea-tasting.e10v.me
+Documentation: https://tea-tasting.e10v.me/
 
 Current build status
 ====================
