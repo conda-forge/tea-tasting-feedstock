@@ -3,7 +3,6 @@ schema_version: 1
 context:
   name: tea-tasting
   version: "1.4.2"
-  python_min: 3.10
 
 package:
   name: ${{ name|lower }}
