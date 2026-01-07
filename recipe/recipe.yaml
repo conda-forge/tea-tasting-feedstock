@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: tea-tasting
-  version: "1.4.3"
+  version: "1.5.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/tea_tasting-${{ version }}.tar.gz
-  sha256: 20734ec956df6bb0b1e6851d27e6b726a227eff1acab9e1148d4fdeccc4398a2
+  sha256: 3fcca38ea83a181d088f2bf1858b476decbe1004d6d94c6c7eaf212e665cb595
 
 build:
   number: 0
