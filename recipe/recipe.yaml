@@ -20,7 +20,7 @@ build:
 requirements:
   host:
     - python ${{ python_min }}.*
-    - pdm-backend
+    - pdm-backend >=2.4.0
     - pip
   run:
     - python >=${{ python_min }}
