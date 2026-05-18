@@ -29,6 +29,8 @@ requirements:
     - numpy >=1.25
     - pyarrow >=16
     - scipy >=1.11
+    # Needed for some earlier python versions
+    - python-tzdata
 
 tests:
   - python:
