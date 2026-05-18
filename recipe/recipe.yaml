@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: tea-tasting
-  version: "1.13.0"
+  version: "1.14.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/tea_tasting-${{ version }}.tar.gz
-  sha256: adc649eaeb2ed313e732e2f29bfbec40ce838d62e9a89df7c8a9f3a215f2a8c9
+  sha256: b4b5d4317d1d94973afd4d81bdf144cdecde9b936558d714175a1156c9eb967f
 
 build:
   number: 0
@@ -20,7 +20,7 @@ build:
 requirements:
   host:
     - python ${{ python_min }}.*
-    - pdm-backend
+    - pdm-backend >=2.4.0
     - pip
   run:
     - python >=${{ python_min }}
@@ -29,13 +29,17 @@ requirements:
     - numpy >=1.25
     - pyarrow >=16
     - scipy >=1.11
+    # Needed for some earlier python versions
+    - python-tzdata
 
 tests:
   - python:
       imports:
         - tea_tasting
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   summary: A Python package for statistical analysis of A/B tests.
